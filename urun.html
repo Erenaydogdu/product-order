@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='urun.css'>
+    <script src='urun.js'></script>
+</head>
+
+<body onload="urunAdediDoldur();urunTaksidiDoldur()">
+    <h3>Parfümeri ürünleri Sipariş Formu</h3>
+    <form action="#" id="formUrun">
+        <label for="urunTipi">Ürün tipi seçimi yapınız</label>
+        <span>
+            <input type="radio" name="urunTipi" id="erkekUrunleri" value="E" onchange="urunleriGetir();">
+            <label for="erkekUrunleri">Erkek Ürünleri</label>
+            <input type="radio" name="urunTipi" id="kadinUrunleri" value="K" onchange="urunleriGetir();">
+            <label for="kadinUrunleri">Kadın Ürünleri</label>
+        </span>
+        <label for="urunListesi">Ürün seçimi yapınız</label>       
+        <select name="" id="urunListesi" size="4">
+            <!--Boş Liste-->
+            
+        </select>  
+        <label for="urunAdedi">Ürün adedini seçiniz</label> 
+        <select name="" id="urunAdedi">
+            <!--Boş Liste-->
+            
+        </select>  
+        <label for="urunTaksidi">Taksit sayısı seçiniz</label>
+        <select name="" id="urunTaksidi">
+            <!--Boş Liste-->
+        </select>
+        <input type="button" value="Hesapla" id="btnAraToplam" onclick="Hesapla();">
+
+        <label for="txtBirimFiyat">Ürünün birim fiyatı</label>
+        <input type="text" name="" id="txtBirimFiyat" disabled>
+
+        <label for="txtAraToplam">Ara Toplam Tutarı</label>
+        <input type="text" name="" id="txtAraToplam" disabled>
+
+        <label for="txtKargo">Kargo ücreti</label>
+        <input type="text" name="" id="txtKargo" disabled>
+
+    </form>
+    <h5 id="sonuc"></h5>
+</body>
+</html>
